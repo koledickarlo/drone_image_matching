@@ -32,8 +32,11 @@ Homography can be robustly estimated from established image correspondences calc
 ### Epipolar filtering
 However, a high percentage of outliers makes the estimation intractable. In our scenario, high percentage of outliers is present due to repetitive structures and wide baselines. Epipolar constrain can be used to choose correspondences which satisfy the **epipolar geometry**:
 
-$$x_1^TK^{-T}EK^Tx_2 = 0,$$
+$$x_q^TK^{-T}EK^Tx_r = 0,$$
+
+
 $$E = [t]_{\times}R$$
+
 where $t$ and $R$ are translation and rotation estimated by Visual Odometry, respectively. For each point in query image, the correspondence must lie on the **epipolar line**, as depicted below:
 
 <p align='center'>
