@@ -14,7 +14,11 @@ There are multiple ways to solve this task, including:
     - **Pros**: Cheap, robust due to RANSAC correspondence matching, highly accurate for all baselines if correspondences are correct.
     - **Cons**: Can not handle parallax (assumes that everything is on the ground-plane, which distors matching for buildings), reliance on accurate correspondence matching. 
 
-This repository implements a simple **POC** solution for **matching via homography estimation**. It simulates noise from the **Visual Odometry**, as in real-time system this would be performed within the VO pipeline.
+This repository implements a simple **POC** solution for **matching via homography estimation**. It simulates noise from the **Visual Odometry**, as in real-time system this would be performed within the VO pipeline. The matching results for a test trajectory are depicted below:
+
+https://github.com/user-attachments/assets/fb12dbf4-1e4a-406d-875c-5e4f4b33bb4d
+
+
 
 ## Requirements
 - Python
@@ -66,6 +70,10 @@ Despite the highly robust estimation, the estimation starts to jitter after a ce
 
 
 To that end, $H$ is estimated incrementally, by chaining the estimated homographies. This can be easily done within an existing VO pipeline.
+
+
+https://github.com/user-attachments/assets/e9729917-a5a9-4177-8445-49397e706103
+
 
 
 
